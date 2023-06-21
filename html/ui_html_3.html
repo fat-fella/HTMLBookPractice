@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id1{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="result.html" method="get">
+    <fieldset>
+        <p>
+            <label>회원여부: </label><input type="radio" name="회원여부" id=""><label>회원</label><input type="radio" name="회원여부" id=""><label>비회원</label>
+        </p>
+        <p>
+            <label>취미(중복선택): </label><input type="checkbox" name="hobby" id=""><label>독서</label><input type="checkbox" name="hobby" id=""><label>영화</label><input type="checkbox" name="hobby" id=""><label>음악</label><input type="checkbox" name="hobby" id=""><label>스포츠</label>
+        </p>
+        <p>
+            <label>직업: </label> <select name="히히" size="4">
+                <option value="1" selected>학생</option>
+                <option value="2">회사원</option>
+                <option value="3">교사</option>
+                <option value="4">자영업</option>
+                <option value="5">기타</option>
+            </select>
+        </p>
+        <p>
+            <caption>남기고 싶은 말: </caption><br><textarea name="" id="" cols="70" rows="5"></textarea>
+        </p>
+            <input type="reset" name="초기화" id=""><input type="submit" name="전송" value="전송" id="id1">
+            
+        </fieldset>
+    </form>
+</body>
+</html>
