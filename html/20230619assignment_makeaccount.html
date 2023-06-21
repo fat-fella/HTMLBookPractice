@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <hr color="coral">
+    <table>
+        <tbody>
+            <tr>
+                <th>이름</th>
+                <td><input type="text" name="name" id="idid" required></td>
+            </tr>
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" name="id" id="" autofocus required></td>
+                <td colspan="6"><a href="">중복확인</a></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="text" name="pw" id="" required></td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td><input type="password" name="pwconfirm" id="" required><td>6자 이상</td></td>
+            </tr>
+            <tr>
+                <th>비밀번호 힌트/답변</th>
+                <td><select name="비밀번호 힌트" id="" >
+                    <option value="">선택하세요</option>
+                    <option value="30">졸업한 초등학교 이름은?</option>
+                    <option value="31"> 제일 친한 친구의 핸드폰 번호는?</option>
+                    <option value="32"> 아버지 성함은?</option>
+                    <option value="33"> 어머니 성함은?</option>
+                    <option value="34"> 어릴 적 내 별명은?</option>
+                    <option value="35"> 가장 아끼는 물건은?</option>
+                    <option value="36"> 좋아하는 동물은?</option>
+                    <option value="37"> 좋아하는 색깔은?</option>
+                    <option value="38"> </option>
+                </select></td>
+            </tr>
+            <tr>
+                <th>답변</th>
+                <td><input type="text" name="pwanswer" id=""></td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td><input type="text" name="pnum" id=""></td>
+            </tr>
+            <tr>
+                <th>메일/SNS정보 수신</th>
+                <td><input type="radio" name="수신" value="수신" id="snsserv"><label for="snsserv">수신</label>
+                <input type="radio" name="수신" value="수신거부" id="rej" ><label for="rej">수신거부</label>
+                </td>
+            </tr>
+            <tr>
+                <th>관심분야</th>
+                <td rowspan="3"><input type="radio" name="관심분야" value="관심분야1" id="int1"><label for="int1">생두</label><input type="radio" name="관심분야" value="관심분야2"id="int2"><label for="int2">원두</label><input type="radio" name="관심분야" value="관심분야4"id="int3"><label for="int3">로스팅</label></td>
+                <td><input type="radio" name="관심분야" value="관심분야4" id="int4"><label for="int4">핸드드립</label></td>
+                <td><input type="radio" name="관심분야" value="관심분야5"id="int5"><label for="int5">에스프레소</label></td>
+                <td><input type="radio" name="관심분야" value="관심분야6"id="int6"><label for="int6">창업</label> </td>                   
+            </tr>
+        </tbody>
+    </table>
+    <hr color="coral">
+    <form action="./index.html">
+    <input type="submit" name="회원가입" value="회원가입" style="margin-left: 5cm;">
+   
+    <input type="submit" name="취소" value="취소"> </form>
+</body>
+</html>

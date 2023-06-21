@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="./resources/css/reset.css">
+    <style>
+    
+        button{
+            background-color: rgba(28, 168, 122, 0.212);
+        }
+        input[type=button]{
+            background-color: rgb(170, 156, 230);
+        }
+        
+            
+        
+        /* *{
+            여긴 백그라운드 컬러 넣지 마라
+        }  */
+        
+        #id_1{
+            background-color: azure;
+            border: 3px solid rgb(236, 200, 178);
+        }
+        .c_red{
+            color: red;
+        }
+        div>form{
+            background-color: yellowgreen;
+        }
+        [class^=s]{
+            color: tomato;
+        }
+        [data-abc],[selected],[checked]{
+            background-color: mediumslateblue;
+            color: peachpuff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div data-abc="테스트용">data abc 테스트용</div>
+        <div><p style="color: skyblue;">로렘 입숨로렘 입숨로렘 입숨로렘 입숨</p></div>
+        <div class="c_yellow">로렘 입숨로렘 입숨로렘 입숨로렘 입숨</div>
+        <div class="s_m">로렘 입숨로렘 입숨로렘 입숨로렘 입숨</div>
+        <div class="s_l">로렘 입숨로렘 입숨로렘 입숨로렘 입숨</div>
+        <div><img src="./resources/images/다운로드.jpg" alt="meowmeownigga"></div>
+        <div id="id_1" class="c_red">
+            <form action="./20230619_search_do.html" method="get">
+                <meter value="0.5" min="" max=""></meter>
+                <progress  max="10">프로그래스는 사용자 입력은 아니나 data전달목적</progress> <!--name지정 x  / 디스플레이용 -->
+                <input type="text" list="datalist_id_3" name="optprice">
+                <datalist id="datalist_id_3">
+                    <option value="1,000" label="XS">XS</option>
+                    <option value="1,200">S</option>
+                    <option value="1,500">M</option>
+                </datalist>
+                <input type="email" name="" id="">
+                <input type="url" name="url" value="https://">
+                <input type="search" name="search" id="">
+                <input type="color" name="mycolor"> <!-- mycolor = %23a69526-->
+                <input type="date" name="mydate" class="c_red" min="2023-01-01">
+                <input type="datetime" name="mydatetime">
+                <input type="time" name="mytime">
+                <input type="number">
+                <input type="range" value="90">
+                <fieldset>
+                    <legend>it관련</legend>
+                    <input checked type="checkbox" name="it" value="java" id="javaid"> <label for="javaid">Java</label>
+                    <input type="checkbox" name="it" value="c#" id="c#id"> <label for="c#id">C#</label>
+                    <input checked type="checkbox" name="it" value="sql" id="sqlid"> <label for="sqlid">SQL</label>
+                </fieldset>
+                <fieldset>
+                    <legend>수험서</legend>
+                    <input type="checkbox" name="sub" value="info"><label>정보처리기사</label>
+                    <input type="checkbox" name="sub" value="sqld"><label>SQLD</label>
+                    <input type="checkbox" name="sub" value="security"><label>정보보안기사</label>
+                </fieldset>
+                <input type="text" name="word" value="meow meow nigga" readonly>
+                <button type="submit">텍스트와 이미지 가능 <img src = "resources/images/다운로드.jpg" width="30" height="20"></button>  
+                <input type="submit" value="검은색">
+                <input type="button" value="버튼타입은 js에서 사용 예정">
+                <input type="reset" value="form태그 내부 사용자 입력창들에 초기값">
+            </form>
+        </div>
+    </header>
+    <div id="wrap_content">
+        <section>
+            <form action="a.html" method="get">
+                <input multiple type="file" name="uploadfile">
+                <button type="submit">파일전달</button>
+
+
+            </form>
+        </section>
+        <aside>
+            <form action="./20230619_login_check_do.html" method="post">
+                <input type="hidden" name="hidd" value="hvalue">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><label for="idid">id</label> </th>
+                            <td><input type="text" name="id" maxlength="10" id="idid" autofocus></td>
+                            <td rowspan="2"><button type="submit">로그인</button></td>
+                        </tr>
+                        <tr>
+                            <th><label>pw</label></th>
+                            <td><input type="password" name="pw"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </aside>
+    </div>
+    <footer>
+        <input type="button" value="버튼은 폼과 무관하게 js연동">
+        copyright meow_meow_nigga_😂
+    </footer>
+</body>
+</html>
