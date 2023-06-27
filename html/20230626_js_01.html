@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width"
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <!--<script src="resources/js/test.js"></script>-->
+    <script>
+        // document.write("ccc");
+        // document.write("ddd"); //apend
+    </script>
+</head>
+<body>
+    <h1 id="heading" class="c1">내용</h1>
+    <h1 class="c1 c2">내용2</h1>
+    <script>
+        document.write("aaa");
+        document.write("bbb");
+        var heading = document.getElementById("heading");
+        console.log(heading);
+        heading = document.querySelector("#heading");
+        console.log(heading);
+        heading = document.querySelector("h1#heading");
+        console.log(heading);
+        heading = document.getElementsByClassName("c1");
+        heading = document.querySelectorAll(".c1") ;
+
+
+
+        function abc(){
+            var aaa1 = 100;
+            return aaa1
+        }
+        var bbb = '십'
+        ccc = 5.7;  // 기존에 window 객체에 ccc 멤버변수가 없었으므로 선언하며 초기값 설정;
+        ddd= 'ㅋㅋ~'
+        var aaa = 10;
+        console.log(window.aaa);
+        console.log(typeof(aaa));
+        console.log(window.bbb);
+        console.log(typeof(window.bbb));
+        console.log(window.ccc);
+        console.log(typeof(ccc));
+
+        window.ccc="값바꿈"; // 멤버변수가 있으므로 기존 값만 바꿈;
+        //windwo.location 처럼 모든 BOM 은 window 객체의 멤버들이므로 window.은 생략가능;
+        //javascript특징
+        //기존에 객체에 없는 멤버변수를 작성하면 새로 선언
+        //기존 멤버변수명을 사용하면 기존 멤버변수에 값 활용;
+
+
+        console.log(typeof(abc())); // abc()의 리턴값
+        console.log(typeof(abc)) //function
+
+
+        var f3 = abc2;
+       // f3();
+       console.log(f3);  //undefined
+       console.log(typeof(f3)); // undefined
+        var f4 = abc3;
+        f4();
+
+
+
+        //자료형에 function이 존재하므로 함수를 변수에 담을 수 있음.
+
+        var abc2 = function(){
+            console.log("함수를 변수 abc2에 담았음")
+        };
+        
+        //2. window 객체 생성시점에 함꼐 함수 생성됨. 따라서 언제 어디서나 사용 가능.
+        function abc3(){
+            console.log("함수 abc3를 만듬")
+        };
+        //호출
+        abc3();
+        abc2();
+
+
+
+        var f1= abc2;
+        f1();
+        var f2 = abc3;
+        f2();
+
+        //변수 선언은 여러번 가능
+        var f1 = "재선언 후 초기값"; // 가독성 위해 재선언;
+
+        // 변수 선언 후 재선언 안 되게 막아줌;
+        let f5 = 10;
+        f5= "값 바꾸기 메롱";
+        // let f5 = "재선언 불가"
+        
+        console.log(f5.length)
+        console.log(f5.charAt(2));
+        console.log(f5.split(" "));
+
+
+        //NaN 타입은 넘버, 값은 허수, 무한대값
+        var f6 = 10/0;
+        console.log(f6);
+        console.log(typeof(f6));
+        f6 = "문자"*100;
+        console.log(f6);
+        console.log(typeof(f6));
+        f6 = "문자"+100;
+        console.log(f6);
+        console.log(typeof(f6));
+        f6 = Math.sqrt(-9); // square root 
+        console.log(f6);
+        console.log(typeof(f6));
+
+
+        var f7 = 10;
+        var f8 = "2";
+        f6 = f7/f8; // + 제외 산술연산 시 number자료형이 우선으로 문자 --> 숫자;
+        console.log(f6);
+
+        console.log("----------------------------");
+        f6 = "23";
+        console.log(typeof(f6));
+        // f6= Number(f6);
+        f6= parseInt(f6);
+        console.log(f6);
+        console.log(typeof(f6));
+        
+        console.log("----------------------------");
+        
+        var f7 = "25";
+        var f8 = 25;
+        if(f7==f8){
+            console.log("f7==f8")
+        } else{
+            console.log("f7!=f8")
+        }
+        
+        if(f7===f8){ //세개는 자료형까지 같아야함.
+            console.log("f7 == f8")
+        } else{
+            console.log("f7 !== f8")
+        }
+        
+        
+        console.log("----------------------------");
+
+        var arr1 = new Array();
+        arr1[0] = "hi";
+        arr1[1] = 30;
+        arr1[2] = function(){console.log("배열의함수")};
+        arr1[10] = 100;
+        console.log(arr1);
+        console.log(typeof(arr1));
+
+        var arr2 = new Array("2", 25 , function(){console.log("배열의 함수")},55);
+        var arr3 = ["2", 25 , function(){console.log("배열의 함수")},55];
+        
+        arr1 = arr1.concat(arr2, arr3);
+        console.log(arr1);
+
+        arr1.push(function(){console.log("함수도 값으로 넣을 수 있음")});
+
+        
+
+
+
+    </script>
+</body>
+</html>
