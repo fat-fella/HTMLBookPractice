@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <style>
+        .field{
+            width: 1000px;
+            margin-left: 700px;
+            border: 2px solid black;
+        }
+        .table{
+            margin-left: 20px;
+        }
+        .legend{
+            margin-left: 15px;
+            margin-bottom: 7px;
+        }
+        .choosefile{
+            margin-left: 13px;
+            border-radius: 5px;
+            
+        }
+        .submit{
+            margin-left: 150px;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            width: 80px;
+            border-radius: 5px;
+        }
+       .title{
+        margin-left: 15px;
+        width: 400px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+       }
+       .content{
+        margin-left: 15px;
+        width: 400px;
+        border-radius: 5px;
+       }
+       .texttitle{
+        margin-bottom: 10px;
+       }
+       hr{
+        width: 950px;
+       }
+       .table2{
+        border: 1px solid black;
+        margin-left: 700px;
+        width: 1000px;
+        height: 100px;
+       }
+       .table2 > tbody > tr, .table2 > tbody > tr > td, .table2 > tbody > tr > th{
+        border: 1px solid black;
+       }
+       .trtop, .trbottom {
+        background-color: rgba(255, 139, 67, 0.755);
+        color: white;
+        height: 30px;
+       }
+       .trcontent{
+        background-color: rgba(221, 234, 107, 0.33);
+       }
+       .table2 th, .table2 tr{
+        width: 50px;
+       }
+       .direct{
+        width: 10px;
+        
+       }
+       .table2 button{
+        margin: 0px;
+        padding: 0px;
+        width: 70px;
+       }
+
+    </style>
+</head>
+<body>
+    <div>
+        <fieldset class="field">
+            <legend class="legend">공지사항 작성하기</legend>
+            <table class="table">
+                <tbody>
+                    <tr class="tablerow">
+                        <th class="texttitle">제목</th>
+                        <td><input type="text"  class="title" name="title" placeholder="제목을 입력하시오."></td>
+                    </tr>
+                    <tr class="tablerow">
+                        <th>내용</th>
+                        <td><textarea placeholder="내용을 입력하시오." class="content" name="content" cols="30" rows="10" ></textarea></textfield></textarea></td>
+                    </tr>
+                    <tr class="tablerow">
+                        <th>첨부파일</th>
+                        <td><input type="file" class="choosefile" name="uploadfile"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div><input type="submit" class="submit" value="작성하기"></div>
+            </fieldset>
+            <hr>
+            <div>
+                <table class="table2">
+                    <tbody>
+                        <tr class="trtop">
+                            <th>번호</th>
+                            <th colspan="19">제목</th>
+                            <th colspan="4">작성자</th>
+                            <th colspan="4">작성일</th>
+                            <th colspan="2">조회수</th>
+                        </tr>
+                        <tr class="trcontent">
+                            <th>9</th>
+                            <td colspan="15">공지사항 제목 9</td>
+                            <td colspan="4" class="direct"><button type="button"><a href="#">바로가기</a></button></td>
+                            <td colspan="4">user01</td>
+                            <td colspan="4">2021-03-29</td>
+                            <td colspan="2">34</td>
+                        </tr>
+                        <tr class="trcontent">
+                            <th>6</th>
+                            <td colspan="15">공지사항 제목 6</td>
+                            <td colspan="4" class="direct"><button type="button"><a href="#">바로가기</a></button></td>
+                            <td colspan="4">answ445</td>
+                            <td colspan="4">2021-03-12</td>
+                            <td colspan="2">67</td>
+                        </tr>
+                        <tr class="trcontent">
+                            <th>3</th>
+                            <td colspan="15">공지사항 제목 3</td>
+                            <td colspan="4" class="direct"><button type="button"><a href="#">바로가기</a></button></td>
+                            <td colspan="4">testg12</td>
+                            <td colspan="4">2021-03-12</td>
+                            <td colspan="2">98</td>
+                        </tr>
+                        <tr class="trcontent">
+                            <th>2</th>
+                            <td colspan="15">공지사항 제목 2</td>
+                            <td colspan="4" class="direct"><button type="button"><a href="#">바로가기</a></button></td>
+                            <td colspan="4">palwe3</td>
+                            <td colspan="4">2021-01-02</td>
+                            <td colspan="2">85</td>
+                        </tr>
+                        <tr class="trcontent"><th>6</th>
+                            <td colspan="15">공지사항 제목 1</td>
+                            <td colspan="4" class="direct"><button type="button"><a href="#">바로가기</a></button></td>
+                            <td colspan="4">xml23</td>
+                            <td colspan="4">2020-12-24</td>
+                            <td colspan="2">124</td></tr>
+                        <tr class="trbottom">
+                            <th colspan="24">전체공지사항 갯수</th>
+                            <th colspan="6">5개</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</body>
+</html>
