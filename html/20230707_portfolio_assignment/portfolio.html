@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script>
+        function clearHandler() {
+            $(".hint").css("display", "none");
+            $(".hint").css("height", 0);
+            $(".hidden").css("display", "none");
+            $(".hidden").css("height", 0);
+            $(".required").css("display", "none");
+            $(".required").css("height", 0);
+        }
+
+        function inputClickHandler() {
+            $(".hint").css("display", "none");
+            $(".hint").css("height", 0);
+            $(".hidden").css("display", "none");
+            $(".hidden").css("height", 0);
+            $(".required").css("display", "none");
+            $(".required").css("height", 0);
+
+            var $hiddenElement = $(this).parents("tr").next().find(".hidden");
+            var $hintElement = $(this).parents("tr").next().find(".hint");
+
+
+            $hiddenElement.css("display", "table-cell");
+            $hiddenElement.css("height", "10px");
+            $hintElement.css("display", "table-cell");
+            $hintElement.css("height", "10px");
+        }
+
+        function requiredCheckHandler() {
+            $(".hint").css("display", "none");
+            $(".hint").css("height", 0);
+            $(".hidden").css("display", "none");
+            $(".hidden").css("height", 0);
+            $(".required").css("display", "none");
+            $(".required").css("height", 0);
+        }
+    </script>
+    <style>
+        html {
+            background-color: rgb(212, 242, 255);
+        }
+
+        form {
+            background-color: #F2F2F2;
+            display: table;
+            margin: 0 auto;
+            border: 2px solid #d8d8d8;
+            width: 370px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 45px;
+        }
+
+        input {
+            background-color: #f2f2f2b2;
+            border: none;
+            border-bottom: dashed;
+            border-color: gray;
+        }
+
+        p {
+            font-size: 1px;
+            color: gray;
+        }
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: #cbe6c2;
+            color: rgb(15, 90, 15);
+            border: none;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        tr>td:nth-child(1) {
+            font-weight: bold;
+        }
+
+        .last {
+            height: 50px;
+        }
+    </style>
+    <script>
+        function foc() {
+            var msg = document.querySelector(".msg");
+            msg.innerText = "영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자";
+        }
+
+        function blr1() {
+            var id = document.querySelector("#id");
+            var req1 = document.querySelector(".req1");
+            if (id.value == "") {
+                req1.innerText = "필수 입력 항목입니다.";
+            } else {
+                req1.innerText = "";
+            }
+        }
+
+        function blr2() {
+            var pw = document.querySelector("#pw");
+            var req2 = document.querySelector(".msg");
+            if (pw.value == "") {
+                req2.innerText = "필수 입력 항목입니다.";
+            } else {
+                msg.innerText = "";
+            }
+        }
+
+        function blr3() {
+            var pwconfirm = document.querySelector("#pwconfirm");
+            var req3 = document.querySelector(".req3");
+            if (pwconfirm.value == "") {
+                req3.innerText = "필수 입력 항목입니다.";
+            } else {
+                req3.innerText = "";
+            }
+        }
+
+        function check() {
+            var id = document.querySelector("#id");
+            var required = document.querySelector(".required");
+            if (id.value == "") {
+                required.innerText = "필수 입력 항목입니다.";
+                id.focus();
+                return;
+            }
+
+            var pw = document.querySelector("#pw");
+            var required = document.querySelector(".required");
+            if (pw.value == "") {
+                required.innerText = "필수 입력 항목입니다.";
+                pw.focus();
+                return;
+            }
+
+            var pwconfirm = document.querySelector("#pwconfirm");
+            var req = document.querySelector(".req");
+            if (pwconfirm.value == "") {
+                req.innerText = "필수 입력 항목입니다.";
+                pwconfirm.focus();
+                return;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <div>
+            <table id="info">
+
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" id="id" size="23" onblur="blr1()" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>&nbsp;</p>
+                    </td>
+                    <td>
+                        <p class="req1">&nbsp;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>패스워드</td>
+                    <td><input type="password" id="pw" size="23" onfocus="foc()" onblur="blr2()" required></td>
+                    <td style="display: none;" class="hint">영문자 대/소문자, 특수문자, 숫자 포함 8~32자</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>&nbsp;</p>
+                    </td>
+                    <td>
+                        <p class="msg">&nbsp;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>패스워드 확인</td>
+                    <td><input type="password" id="pwconfirm" size="23" onblur="blr3()" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>&nbsp;</p>
+                    </td>
+                    <td>
+                        <p class="req3">&nbsp;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td><input type="text" size="8">@<input type="text" size="8"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>&nbsp;</p>
+                    </td>
+                    <td>
+                        <p>&nbsp;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>주소</td>
+                    <td>
+                        <input type="text" size="23">
+                        <br><br>
+                        <input type="text" size="23">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>&nbsp;</p>
+                    </td>
+                    <td>
+                        <p>&nbsp;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>&nbsp;</p>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="last" colspan="2"><button type="button" onclick="check()">가입</button></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>
